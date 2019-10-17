@@ -1,8 +1,8 @@
 import cv2
 import numpy as np
 
-path_to_image = '../../resources/mainlogo.png'
-image = cv2.imread(path_to_image)
+PATH_TO_IMAGE = '../../resources/mainlogo.png'
+image = cv2.imread(PATH_TO_IMAGE)
 
 str_delimeter = '--------------------------------------------------'
 
@@ -10,15 +10,15 @@ px = image[60, 120]
 print(px)
 
 # ----------------------ACCESS using px---------------------------
-# accessing only blue pixel
+# accessing only blue pixel (0 указывает на первое число в BGR)
 px_blue = image[60, 120, 0]
 print(px_blue)
 
-# accessing only green pixel
+# accessing only green pixel (1 указывает на второе число в BGR)
 px_green = image[60, 120, 1]
 print(px_green)
 
-# accessing only red pixel
+# accessing only red pixel (2 указывает на третье число в BGR)
 px_red = image[60, 120, 2]
 print(px_red)
 

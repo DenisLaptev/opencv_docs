@@ -2,11 +2,11 @@ import cv2
 import numpy as np
 
 # Load two images
-path_to_image1 = '../../resources/opencv_logo.png'
-path_to_image2 = '../../resources/mainlogo.png'
+PATH_TO_IMAGE1 = '../../resources/opencv_logo.png'
+PATH_TO_IMAGE2 = '../../resources/mainlogo.png'
 
-image1 = cv2.imread(path_to_image1)
-image2 = cv2.imread(path_to_image2)
+image1 = cv2.imread(PATH_TO_IMAGE1)
+image2 = cv2.imread(PATH_TO_IMAGE2)
 
 # I want to put logo on top-left corner, So I create a ROI
 rows, cols, channels = image2.shape

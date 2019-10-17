@@ -1,10 +1,7 @@
 import numpy as np
 import cv2
 
-path_to_save_image = '../../resources/opencv_logo.png'
-
-
-
+PATH_TO_SAVE_IMAGE = '../../resources/opencv_logo.png'
 
 # Create a black image
 # (y=h, x=w, number_of_channels=3)
@@ -60,6 +57,6 @@ image2 = cv2.circle(image_white, (384, 221), 30, (255, 255, 255), -1)
 cv2.imshow('opencv_logo', image2)
 cv2.waitKey(0)
 
-cv2.imwrite(path_to_save_image, image_white)
+cv2.imwrite(PATH_TO_SAVE_IMAGE, image_white)
 
 cv2.destroyAllWindows()

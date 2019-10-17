@@ -4,8 +4,8 @@ from matplotlib import pyplot as plt
 import pytest
 from numpy.core.tests.test_mem_overlap import xrange
 
-path_to_image = '../../resources/mainlogo.png'
-img = cv2.imread(path_to_image, 0)
+PATH_TO_IMAGE = '../../resources/mainlogo.png'
+img = cv2.imread(PATH_TO_IMAGE, 0)
 
 ret, thresh1 = cv2.threshold(img, 127, 255, cv2.THRESH_BINARY)
 ret, thresh2 = cv2.threshold(img, 127, 255, cv2.THRESH_BINARY_INV)

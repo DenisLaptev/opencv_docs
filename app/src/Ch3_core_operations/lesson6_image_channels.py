@@ -1,8 +1,8 @@
 import cv2
 import numpy as np
 
-path_to_image = '../../resources/mainlogo_large.png'
-image = cv2.imread(path_to_image)
+PATH_TO_IMAGE = '../../resources/mainlogo_large.png'
+image = cv2.imread(PATH_TO_IMAGE)
 
 b, g, r = cv2.split(image)
 

@@ -3,8 +3,8 @@ import numpy as np
 
 print(cv2.useOptimized())
 
-path_to_image = '../../resources/opencv_logo.png'
-image = cv2.imread(path_to_image)
+PATH_TO_IMAGE = '../../resources/opencv_logo.png'
+image = cv2.imread(PATH_TO_IMAGE)
 
 e1 = cv2.getTickCount()
 img = cv2.medianBlur(image, 1)

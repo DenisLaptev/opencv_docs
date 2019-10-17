@@ -1,6 +1,9 @@
 import numpy as np
 import cv2
 
+# cv2.LINE_AA  - gives anti-aliased line (сглаженная линия)
+# which looks great for curves.
+
 # Create a black image
 # (y=h, x=w, number_of_channels=3)
 image = np.zeros((512, 1000, 3), np.uint8)
@@ -24,6 +27,8 @@ image4 = cv2.ellipse(image, (256, 256), (100, 50), 0, 0, 180, 255, -1)
 cv2.imshow('black_image_with_ellipse', image4)
 cv2.waitKey(0)
 
+# array of shape ROWSx1x2 where ROWS are number of vertices
+# and it should be of type int32.
 pts = np.array([[10, 5], [20, 30], [70, 20], [50, 10]], np.int32)
 pts = pts.reshape((-1, 1, 2))
 image5 = cv2.polylines(image, [pts], True, (0, 255, 255))
@@ -43,7 +48,14 @@ cv2.imshow('black_image_with_fillPoly', image7)
 cv2.waitKey(0)
 
 font = cv2.FONT_HERSHEY_SIMPLEX
-image8 = cv2.putText(image, 'OpenCV', (10, 500), font, 4, (255, 255, 255), 2, cv2.LINE_AA)
+image8 = cv2.putText(img=image,
+                     text='OpenCV',
+                     org=(10, 500),
+                     fontFace=font,
+                     fontScale=4,
+                     color=(255, 255, 255),
+                     thickness=2,
+                     lineType=cv2.LINE_AA)
 cv2.imshow('black_image_with_text', image8)
 cv2.waitKey(0)
 

@@ -2,6 +2,7 @@ import numpy as np
 import cv2
 
 cap = cv2.VideoCapture(0)
+# check the frame width and height respectively
 print(cap.get(3))
 print(cap.get(4))
 

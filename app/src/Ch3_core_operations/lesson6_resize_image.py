@@ -1,8 +1,8 @@
 import cv2
 
-path_to_image = '../../resources/mainlogo.png'
-path_to_save_image = '../../resources/mainlogo_large.png'
-image = cv2.imread(path_to_image)
+PATH_TO_IMAGE = '../../resources/mainlogo.png'
+PATH_TO_SAVE_IMAGE = '../../resources/mainlogo_large.png'
+image = cv2.imread(PATH_TO_IMAGE)
 
 print('Original Dimensions : ', image.shape)
 
@@ -18,7 +18,7 @@ print('Resized Dimensions : ', resized.shape)
 cv2.imshow("Initial image", image)
 cv2.imshow("Resized image", resized)
 
-cv2.imwrite(path_to_save_image, resized)
+cv2.imwrite(PATH_TO_SAVE_IMAGE, resized)
 
 cv2.waitKey(0)
 cv2.destroyAllWindows()
