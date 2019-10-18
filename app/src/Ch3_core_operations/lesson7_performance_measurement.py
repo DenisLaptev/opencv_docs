@@ -10,5 +10,5 @@ e1 = cv2.getTickCount()
 img = cv2.medianBlur(image, 1)
 e2 = cv2.getTickCount()
 
-t = (e2 - e1) / cv2.getTickFrequency()
-print(t)
+time = (e2 - e1) / cv2.getTickFrequency()
+print(time)
